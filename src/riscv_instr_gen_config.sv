@@ -168,10 +168,13 @@ class riscv_instr_gen_config extends uvm_object;
   int                    illegal_instr_ratio;
   int                    hint_instr_ratio;
   // CSR instruction control
-  bit                    gen_all_csrs_by_default = 0; // Generate CSR instructions that use all supported CSRs. Other options below only take effect if this is enabled.
+  bit                    gen_all_csrs_by_default = 0; // Generate CSR instructions that use all
+                                                      // supported CSRs. Other options below only
+                                                      // take effect if this is enabled.
   bit                    gen_csr_ro_write = 0;        // Generate CSR writes to read-only CSRs
   privileged_reg_t       add_csr_write[] = {};        // CSRs to add to the set of writeable CSRs
-  privileged_reg_t       remove_csr_write[] = {};     // CSRs to remove from the set of writeable CSRs
+  privileged_reg_t       remove_csr_write[] = {};     // CSRs to remove from the set of writeable
+                                                      // CSRs
   // Number of harts to be simulated, must be <= NUM_HARTS
   int                    num_of_harts = NUM_HARTS;
   // Use SP as stack pointer

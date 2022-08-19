@@ -106,7 +106,11 @@ class riscv_csr_instr extends riscv_instr;
     end
   endfunction : create_csr_filter
 
-  static function void create_include_write_reg(privileged_reg_t add_csr[], privileged_reg_t remove_csr[], bit [11:0] initial_csrs[$]);
+  static function void create_include_write_reg(
+    privileged_reg_t add_csr[],
+    privileged_reg_t remove_csr[],
+    bit [11:0] initial_csrs[$]
+  );
     include_write_reg.delete();
 
     foreach (initial_csrs[r]) begin
